@@ -1,0 +1,28 @@
+// frontend/src/App.js
+import React, { useState, useEffect } from 'react';
+import TokenList from './components/TokenList';
+import TradeForm from './components/TradeForm';
+
+function App() {
+  const [tokenBalance, setTokenBalance] = useState(0);
+
+  useEffect(() => {
+    // Fetch token balance from the backend API
+    fetch('/balance/<USER_ADDRESS>')
+      .then(response => response.json())
+      .then(data => setTokenBalance(data.balance));
+  }, []);
+
+  return (
+    <div>
+      <h1>FuelLabs DApp Example</h1>
+      
+      <h2>MyToken Balance: {tokenBalance}</h2>
+      
+      <TokenList />
+      <TradeForm />
+    </div>
+  );
+}
+
+export default App;
