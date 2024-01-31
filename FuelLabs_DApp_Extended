@@ -1,0 +1,28 @@
+FuelLabs_DApp_Extended/
+|-- contracts/
+|   |-- MyToken.sol           // ERC-20 Token
+|   |-- FuelDex.sol           // Decentralized Exchange
+|   |-- Governance.sol        // Governance Contract
+|   |-- Staking.sol           // Staking Contract
+|-- frontend/
+|   |-- src/
+|       |-- components/
+|           |-- Dashboard.jsx  // Main dashboard component
+|           |-- TokenList.jsx  // Component to display token list
+|           |-- TradeForm.jsx  // Component for trading
+|       |-- App.css
+|       |-- App.js             // Main React App component
+|       |-- index.css
+|       |-- index.js
+|-- backend/
+|   |-- server.js
+|-- tests/
+|   |-- testMyToken.js
+|   |-- testFuelDex.js
+|   |-- testGovernance.js
+|   |-- testStaking.js
+|-- scripts/
+|   |-- deploy.js
+|-- hardhat.config.js
+|-- README.md
+|-- .gitignore
